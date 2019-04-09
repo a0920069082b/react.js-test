@@ -1,0 +1,58 @@
+.Footer {
+  /* div Footer */
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  text-align: left;
+  width: 100%;
+  position: absolute;
+  hr {
+    width: 95%;
+  }
+  .footerLogo {
+    /* div footerLogo */
+    display: inline-block;
+    margin: 10px 0px 0px 15px;
+    .footerLogoShow {
+      width: 100px;
+      vertical-align: middle;
+    }
+  }
+  .footerSlogan {
+    /* div footerSlogan */
+    display: inline-block;
+    vertical-align: middle;
+    label {
+      color: #444444;
+      font-size: 12px;
+    }
+  }
+  .footerContext {
+    display: inline-block;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 78%;
+    text-align: right;
+    footer {
+      display: inline-block;
+      vertical-align: middle;
+      p {
+        color: #888888;
+        font-weight: bold;
+        font-size: 12px;
+      }
+    }
+    .Earth {
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      margin-left: 45px;
+    }
+    label {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 12px;
+      color: #444444;
+      margin: 0px 0px 0px 18px;
+    }
+  }
+}

@@ -1,26 +1,34 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+//引用Router相關套件
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+/* 引用Component */
+//引用Header
+import Header from "./components/Header";
+//引用Footer
+import Footer from "./components/Footer";
+
+/* 引用Routes */
+import Home from './routes/Home';
+import Product from './routes/Product';
+import productDetailed from './routes/productDetailed';
+import shoppingCart from './routes/shoppingCart';
+
+
+//樣式引入
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          <Header />
+
+          <Footer />
+          <Route path="/" exact component={Home} />
+        </div>
+      </Router>
     );
   }
 }

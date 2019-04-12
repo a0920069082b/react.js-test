@@ -1,0 +1,27 @@
+.shoppingCart {
+  text-align: center;
+  .orderTable {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width:1200px;
+    thead {
+      th {
+        border: 1px solid #000000;
+        background-color:#FFC0CB;
+        color: #FFFFFF;
+      }
+    }
+    tbody {
+      tr:hover{
+        background: #DDDDDD ;
+      }
+      td {
+        border: 1px solid #000000;
+      }
+      td:nth-child(3) {
+        text-align: left;
+      }
+    }
+  }
+}

@@ -41,6 +41,12 @@
         li {
           margin-left: 20px;
           display: inline-block;
+          
+          .pageName{
+            vertical-align: middle;
+            text-decoration: none;
+            color:#444444;
+          }
         }
       }
     }

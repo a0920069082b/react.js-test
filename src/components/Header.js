@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 //引入scss檔案
 import "./css/Header.scss";
 //引入Logo
@@ -43,20 +44,63 @@ class Header extends Component {
         </div>
         <div className="headerFunction">
           <a href={"#"}>我要開設計館</a>
-          <button className='loginBtn'>登入/註冊</button>
-          <a href={'#'}><img className='shoppingIcon' alt='購物車' title='購物車' src={shopping}/></a>
+          <button className="loginBtn">登入/註冊</button>
+          <Link to='/shoppingCart'>
+            <img
+              className="shoppingIcon"
+              alt="購物車"
+              title="購物車"
+              src={shopping}
+            />
+          </Link>
         </div>
-        <div className='headerMenu'>
+        <div className="headerMenu">
           <ul>
-            <li>主打活動</li>
-            <li>配件飾品</li>
-            <li>居家生活</li>
-            <li>包包提袋</li>
-            <li>衣著良品</li>
-            <li>文具卡片</li>
-            <li>體驗活動</li>
-            <li>所有分類</li>
-            <li>探索更多</li>
+            <li>
+              <Link  className="pageName" to="/">
+                主打活動
+              </Link>
+            </li>
+            <li>
+              <Link  className="pageName" to="/Product">
+                配件飾品
+              </Link>
+            </li>
+            <li>
+              <Link className="pageName" to="/Product">
+                居家生活
+              </Link>
+            </li>
+            <li>
+              <Link  className="pageName" to="/Product">
+                包包提袋
+              </Link>
+            </li>
+            <li>
+              <Link className="pageName" to="/Product">
+                衣著良品
+              </Link>
+            </li>
+            <li>
+              <Link className="pageName" to="/Product">
+                文具卡片
+              </Link>
+            </li>
+            <li>
+              <Link className="pageName" to="/Product">
+                體驗活動
+              </Link>
+            </li>
+            <li>
+              <Link  className="pageName" to="/Product">
+                所有分類
+              </Link>
+            </li>
+            <li>
+              <Link  className="pageName" to="/Product">
+                探索更多
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

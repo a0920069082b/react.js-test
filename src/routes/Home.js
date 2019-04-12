@@ -3,12 +3,11 @@ import React, { Component } from "react";
 import "./css/Home.scss";
 class Home extends Component {
   renderProduct(product) {
-    console.log(product);
     return (
       <div key={product.id} className='productShow'>
-      <img alt='product01_01.jpg' src={product.images[0]}/>
-        <p>{product.name}</p>
-        <p>{product.price}</p>
+      <img alt='product01_01.jpg' src={product.images[0]} onClick={()=>this.props.history.push(`/productDetailed/${product.id}`)}/>
+      <p>{product.name}</p>
+      <p>{product.price}</p>
       </div>
     );
   }

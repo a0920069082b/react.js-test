@@ -9,23 +9,20 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 /* 引用Routes */
-import Home from './routes/Home';
-import Product from './routes/Product';
-import productDetailed from './routes/productDetailed';
-import shoppingCart from './routes/shoppingCart';
+import Home from "./routes/Home";
+import Product from "./routes/Product";
+import ProductDetailed from "./routes/productDetailed";
+import shoppingCart from "./routes/shoppingCart";
 /* 引用ProductAPI */
-import getProduct from './servies/getProduct';
-
-
+import getProduct from "./servies/getProduct";
 
 //樣式引入
 import "./App.css";
 
 class App extends Component {
-
-  constructor(){
+  constructor() {
     super();
-    this.state={
+    this.state = {
       products: []
     };
     this.getProductList();
@@ -33,7 +30,11 @@ class App extends Component {
 
   async getProductList() {
     const list = await getProduct.get();
-    this.setState({ products:list });
+    this.setState({ products: list });
+  }
+
+  renderProductDetailed(props) {
+    return;
   }
 
   render() {
@@ -41,10 +42,17 @@ class App extends Component {
       <Router>
         <div className="App">
           <Header />
-          <Route path="/" exact render={props => <Home {...props} products={this.state.products} />} />
-          <Route path="/Product" component={Product}/>
-          <Route path="/productDetailed" component={productDetailed}/>
-          <Route path="/shoppingCart" component={shoppingCart}/>
+          <Route
+            path="/"
+            exact
+            render={props => <Home {...props} products={this.state.products} />}
+          />
+          <Route path="/Product" component={Product} />
+          <Route
+            path="/productDetailed/:id"
+            render={props => <ProductDetailed {...props} products={this.state.products} />}
+          />
+          <Route path="/shoppingCart" component={shoppingCart} />
           <Footer />
         </div>
       </Router>

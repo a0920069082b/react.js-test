@@ -1,17 +1,20 @@
 .Home{  
-  font-family: Microsoft JhengHei;
+  font-family: 'Microsoft JhengHei';
   text-align:left;
-  padding:0px 0px 0px 0px;
-  margin:0px 0px 0px 0px;
+  // 既然都一樣0px，就只寫一個就可。
+  padding: 0px;
+  // 既然都一樣0px，就只寫一個就可。
+  margin: 0px;
   .titleName{
     margin:30px 0px 30px 22px;
-    color: #444444;
+    // 色碼簡寫
+    color: #444;
     font-size: 18px;
     font-weight: bold;
   }
   .productShow{
     width:230px;
-    padding:0px 0px 0px 0px;
+    padding: 0px;
     margin:0px 0px 0px 20px;
     display: inline-block;
     vertical-align: middle;

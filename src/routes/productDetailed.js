@@ -86,7 +86,8 @@ class productDetailed extends Component {
               </button>
             </div>
             <div>
-              產品明細：{this.p.detailed.split("\n").map((item, key) => {
+              { /** 最好這種 \n 有反斜線的，外面改使用兩個正斜線包起來 */ }
+              產品明細：{this.p.detailed.split(/\n/).map((item, key) => {
                 return (
                   <span key={key}>
                     {item}

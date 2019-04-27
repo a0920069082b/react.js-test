@@ -7,17 +7,21 @@
     width:1200px;
     thead {
       th {
-        border: 1px solid #000000;
+        // 色碼都一樣，就縮寫。
+        border: 1px solid #000;
         background-color:#FFC0CB;
-        color: #FFFFFF;
+        // 色碼都一樣，就縮寫。
+        color: #fff;
       }
     }
     tbody {
       tr:hover{
-        background: #DDDDDD ;
+        // 色碼都一樣，就縮寫。
+        background: #ddd ;
       }
       td {
-        border: 1px solid #000000;
+        // 色碼都一樣，就縮寫。
+        border: 1px solid #000;
       }
       td:nth-child(3) {
         text-align: left;

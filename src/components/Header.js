@@ -43,6 +43,7 @@ class Header extends Component {
           </div>
         </div>
         <div className="headerFunction">
+          { /* eslint-disable jsx-a11y/anchor-is-valid */ }
           <a href={"#"}>我要開設計館</a>
           <button className="loginBtn">登入/註冊</button>
           <Link to='/shoppingCart'>
